@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>안녕하세요~~{{ name }}에요~~~^0^~~~</h1>
+<p>제 이름의 길이는 {{ name | length}} 글자 입니다~!</p>
+{% comment %} <p>제가 좋아하는 음식은 {{ foods | join:" 랑 "}} 에요~! </p> {% endcomment %}
+{% for food in foods %}
+  <p>{{ forloop.counter0 }}번째 음식 {{ food }}</p>
+{% endfor %}
+
+{% endblock content %}
